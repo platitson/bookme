@@ -1,4 +1,5 @@
-// import './sign-in.js';
-// import 'coronavirus.js';
-
-// Подключая файл через импорт, функция не отрабатывает. Пришлось подключать sign-in.js прямо в HTML
+import './sign-in.js';
+import './coronavirus.js';
+import './page-turner.js';
+import './log-out.js';
+import './destinations.js';
