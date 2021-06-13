@@ -1,10 +1,19 @@
 const arrow = document.querySelector('.coronavirus-wrapper img');
 const contentCoronavirus = document.querySelector('.coronavirus-hidden');
+const readMoreLink = document.querySelector('.coronavirus-hidden a');
 
 function popupWindow() {
-    contentCoronavirus.style.display = 'block';
+    if (contentCoronavirus.style.display === 'none'){
+        contentCoronavirus.style.display = 'block';
+        arrow.style.transform = "rotate(180deg)";
+    } else {
+        contentCoronavirus.style.display = 'none';
+        arrow.style.transform = 'none';
+    }
 }
 
 arrow.addEventListener('click', popupWindow);
 
-// Пока что добавила возможность открыть, осталось добавить закрыть :)
+readMoreLink.onclick = () => {
+    location.href = 'https://www.google.com/search?q=coronavirus';
+} // блокирует target="_blank"?

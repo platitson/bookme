@@ -1,3 +1,5 @@
+import { redirectToPersonalAccount } from './page-turner.js';
+
 const form = document.querySelector('.sign-in-form');
 const content = document.querySelector('.content');
 const continueButton = document.querySelector('.sign-in-form button');
@@ -61,15 +63,11 @@ function onContinueButtonClick() {
             localStorage.setItem('name', loggedUserData.name);
             signInButton.innerHTML = loggedUserData.name;
             signInButton.removeEventListener('click', showSignInForm);
-            signInButton.addEventListener('click', redirect);
+            signInButton.addEventListener('click', redirectToPersonalAccount);
         } else {
             signInErrorMessage.style.display = 'block';
         }
     });
-}
-
-function redirect() {
-    location.href = './page-3/index.html'; // как записать ссылку так, чтобы заходя с любой страницы путь был найден? От корня / не понимает. Пока что войти в ЛК можно только с главной страницы.
 }
 
 continueButton.addEventListener('click', onContinueButtonClick);
@@ -85,16 +83,8 @@ function nameDisplayCheck() {
     if (localStorage.getItem('username') && localStorage.getItem('password') && localStorage.getItem('name')) {
         signInButton.innerHTML = localStorage.getItem('name');
         signInButton.removeEventListener('click', showSignInForm);
-        signInButton.addEventListener('click', redirect);
+        signInButton.addEventListener('click', redirectToPersonalAccount);
     }
 }
 
-document.body.onload = nameDisplayCheck;
-
-
-
-
-
-
-// export;
-// см. описание проблемы экспорта в main.js
+export { nameDisplayCheck };
