@@ -1,0 +1,56 @@
+.sign-in-form {
+    padding: 30px;
+    width: 350px;
+    background-color: white;
+    border: 3px solid #dfeff8;
+    border-radius: 10px;
+    position: fixed;
+    top: 165px;
+    left: 50vw;
+    transform: translateX(-175px);
+    display: none;
+}
+
+.close-form {
+    width: 15px;
+    height: 15px;
+    background: url(../images/x-mark.png);
+    background-size: 100%;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.close-form:hover {
+    cursor: pointer;
+}
+
+.sign-in-form input {
+    width: 100%;
+    height: 30px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+.sign-in-form button {
+    width: 100%;
+    height: 40px;
+    background-color: #315d9b;
+    border: none;
+    color: white;
+    font-size: 18px;
+    border-radius: 3px;
+    margin-top: 5px;
+}
+
+.sign-in-error {
+    color: red;
+}
+
+.sign-in-form button:hover {
+    cursor: pointer;
+}
+
+.sign-in-error {
+    display: none;
+}

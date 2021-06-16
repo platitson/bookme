@@ -1,5 +1,3 @@
-import { redirectToPersonalAccount } from './page-turner.js';
-
 const form = document.querySelector('.sign-in-form');
 const content = document.querySelector('.content');
 const continueButton = document.querySelector('.sign-in-form button');
@@ -8,26 +6,9 @@ const password = document.querySelector('input.password');
 const signInButton = document.querySelector('.sign-in-button');
 const signInErrorMessage = document.querySelector('.sign-in-error');
 const closeFormButton = document.querySelector('.close-form');
+const personalAccountButton = document.querySelector('.page-3');
 
-const users = [
-    {
-        username: '123',
-        password: '123',
-        data: {
-            name: 'Pavel',
-            surname: 'Novak'
-        }
-    },
-    {
-        username: 'user',
-        password: 'user',
-        data: {
-            name: 'Jan',
-            surname: 'Svoboda'
-        }
-    },
-];
-
+// Sign-in form
 function showSignInForm() {
     form.style.display = 'block';
     content.classList.add('blur');
@@ -46,24 +27,56 @@ form.addEventListener('submit', (evt) => {
     evt.preventDefault();
 })
 
+function hideErrorMessage() {
+    signInErrorMessage.style.display = 'none';
+}
+
+username.addEventListener('keyup', hideErrorMessage);
+password.addEventListener('keyup', hideErrorMessage);
+
+// Sign-in process
+const users = [
+    {
+        username: '123',
+        password: '123',
+        data: {
+            role: 'admin',
+            name: 'Pavel',
+            surname: 'Novak'
+        }
+    },
+    {
+        username: 'user',
+        password: 'user',
+        data: {
+            role: 'user',
+            name: 'Jan',
+            surname: 'Svoboda'
+        }
+    },
+];
+
+window.addEventListener('load', () => {
+    personalAccountButton.style.display = 'none';
+    nameDisplayCheckAfterReload();
+});
+
 function onContinueButtonClick() {
     users.forEach((user) => {
-        let currentUsername = username.value;
-        let currentPassword = password.value;
         let loggedUserData;
-        if (user.username === currentUsername && user.password === currentPassword) {
+        if (user.username === username.value && user.password === password.value) {
             loggedUserData = user.data;
         }
-
         if (loggedUserData) {
             form.style.display = 'none';
             content.classList.remove('blur');
-            localStorage.setItem('username', currentUsername);
-            localStorage.setItem('password', currentPassword);
+            localStorage.setItem('username', username.value);
+            localStorage.setItem('password', password.value);
             localStorage.setItem('name', loggedUserData.name);
-            signInButton.innerHTML = loggedUserData.name;
-            signInButton.removeEventListener('click', showSignInForm);
-            signInButton.addEventListener('click', redirectToPersonalAccount);
+            localStorage.setItem('role', loggedUserData.role);
+            signInButton.style.display = 'none';
+            personalAccountButton.style.display = 'inline-block';
+            personalAccountButton.innerHTML = loggedUserData.name;
         } else {
             signInErrorMessage.style.display = 'block';
         }
@@ -72,19 +85,10 @@ function onContinueButtonClick() {
 
 continueButton.addEventListener('click', onContinueButtonClick);
 
-function hideErrorMessage() {
-    signInErrorMessage.style.display = 'none';
-}
-
-username.addEventListener('keyup', hideErrorMessage);
-password.addEventListener('keyup', hideErrorMessage);
-
-function nameDisplayCheck() {
+function nameDisplayCheckAfterReload() {
     if (localStorage.getItem('username') && localStorage.getItem('password') && localStorage.getItem('name')) {
-        signInButton.innerHTML = localStorage.getItem('name');
-        signInButton.removeEventListener('click', showSignInForm);
-        signInButton.addEventListener('click', redirectToPersonalAccount);
+        signInButton.style.display = 'none';
+        personalAccountButton.style.display = 'inline-block';
+        personalAccountButton.innerHTML = localStorage.getItem('name');
     }
 }
-
-export { nameDisplayCheck };

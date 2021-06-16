@@ -1,0 +1,112 @@
+.inspiration {
+    padding-top: 30px;
+}
+
+.inspiration-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.inspiration-items {
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    padding: 0 15px 0;
+    color: white;
+    text-decoration: none;
+}
+
+.inspiration-items:hover{
+    cursor: pointer;
+    transform: scale(1.03);
+    transition-duration: 0.4s;
+}
+
+.pool div, .berlin div, .spa div, .portugal div, .ski div {
+    position: absolute;
+    bottom: 20px;
+}
+
+.pool, .berlin, .spa {
+    width: 32.5%;
+    height: 300px;
+}
+
+.pool {
+    background: linear-gradient(180deg, #ffffff00 50%, #242323 90%), url(../images/inspiration/pool.jpg);
+    background-size: cover;
+}
+
+.berlin {
+    background: linear-gradient(180deg, #ffffff00 50%, #242323 90%), url(../images/inspiration/club.jpg);
+    background-size: cover;
+}
+
+.spa {
+    background: linear-gradient(180deg, #ffffff00 50%, #242323 90%), url(../images/inspiration/mask.jpg);
+    background-size: cover;
+}
+
+.portugal, .ski {
+    width: 49%;
+    height: 370px;
+}
+
+.portugal {
+    background: linear-gradient(180deg, #ffffff00 50%, #242323 90%), url(../images/inspiration/house.jpg);
+    background-size: cover;
+}
+
+.ski {
+    background: linear-gradient(180deg, #ffffff00 50%, #242323 90%), url(../images/inspiration/mountains.jpg);
+    background-size: cover;
+}
+
+.destinations {
+    padding-top: 40px;
+}
+
+.destinations nav {
+    border-bottom: 1px solid rgb(3, 3, 189);
+    margin: 10px 0;
+}
+
+.destinations nav li {
+    display: inline-block;
+    padding: 10px 20px;
+}
+
+.destinations nav li:hover{
+    cursor: pointer;
+}
+
+div.regions, div.cities, div.places {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+}
+
+div.regions a, div.cities a, div.places a {
+    width: 19%;
+    text-decoration: none;
+    color: #0071c2;
+    display: block;
+    margin-top: 10px;
+}
+
+div.regions a:hover, div.cities a:hover, div.places a:hover {
+    color: brown;
+}
+
+.destinations-active {
+    color: white;
+    background-color: #0071c2;
+}
+
+.destinations-inactive {
+    color: gray;
+    background-color: white;
+}

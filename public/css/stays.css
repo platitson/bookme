@@ -1,0 +1,155 @@
+.search-box {
+    background-color: #f5f5f5;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #e0dddd;
+}
+
+.search-box form {
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.search-box form input {
+    height: 60px;
+    padding-left: 20px;
+    border: 5px solid #febb02;
+    border-radius: 5px;
+}
+
+.search-box form input[type="text"] {
+    width: 35%;
+}
+
+.search-box form input[type="date"] {
+    width: 24%;
+}
+
+.search-box form input[type="number"] {
+    width: 30%;
+}
+
+.search-box form button {
+    width: 10%;
+    height: 60px;
+    border: 5px solid #febb02;
+    border-radius: 5px;
+    background-color: #0071c2;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+    transform: translateY(2px);
+}
+
+.search-box input[type="checkbox"] {
+    cursor: pointer;
+}
+
+.explore {
+    padding-top: 40px;
+    padding-bottom: 70px;
+}
+
+.explore-wrapper {
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.explore-items {
+    width: 19%;
+    color: black;
+    text-decoration: none;
+}
+
+.explore-items img {
+    width: 100%;
+    border-radius: 4px;
+}
+
+.offers-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    color: white;
+    text-shadow: 2px 2px 2px #000;
+    padding-bottom: 40px;
+}
+
+.offers-items {
+    margin-bottom: 20px;
+    height: 300px;
+    border-radius: 3px;
+    padding: 30px 20px 0;
+    position: relative;
+}
+
+.offers-items:hover {
+    cursor: pointer;
+    box-shadow: inset 0px 70px 30px rgba(66, 65, 65, 0.445);
+}
+
+.offers-prague, .offers-copenhagen {
+    width: 49%;
+}
+
+.offers-prague {
+    background: url(../images/offers/prague.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.offers-copenhagen {
+    background: url(../images/offers/copen.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.offers-vienna, .offers-budapest, .offers-berlin {
+    width: 32%;
+}
+
+.offers-vienna {
+    background: url(../images/offers/wien.jpg);
+    background-size: cover;
+    background-position: center;
+} 
+
+.offers-budapest{
+    background: url(../images/offers/budap.jpg);
+    background-size: cover;
+    background-position: center;
+} 
+
+.offers-berlin {
+    background: url(../images/offers/berlin.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.price {
+    position: absolute;
+    text-align: right;
+    padding: 5px;
+    bottom: 20px;
+    right: 20px;
+    background-color: rgba(66, 65, 65, 0.712);
+    border-radius: 3px;
+}
+
+.connect-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.connect-items {
+    width: 23.5%;
+    text-decoration: none;
+    color: black;
+}
+
+.connect-items img {
+    width: 100%;
+    border-radius: 3px;
+}

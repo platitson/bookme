@@ -1,0 +1,134 @@
+header {
+    background-color: #003580;
+    padding-top: 20px;
+}
+
+.header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.logo {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 32px;
+}
+
+.logo span {
+    color: rgb(8, 150, 255);
+}
+
+.header-items button {
+    margin-left: 10px;
+    vertical-align: middle;
+}
+
+.currency-button {
+    padding: 15px 10px 15px;
+    color: white;
+    font-size: 20px;
+    background-color: #003580;
+    border: none;
+}
+
+.currency-button:hover, .lang-button:hover {
+    background-color: #315d9b;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.lang-button {
+    padding: 10px;
+    background-color: #003580;
+    border: none;
+}
+
+.lang-button img {
+    border-radius: 15px;
+    width: 30px;
+    height: 30px;
+}
+
+button.page-4 {
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bolder;
+    background-color: #003580;
+    color: white;
+    border: 2px solid white;
+    border-radius: 3px;
+}
+
+button.page-4:hover {
+    cursor: pointer;
+    background-color: #315d9b;
+}
+
+.register-button, .sign-in-button, button.page-3 {
+    padding: 10px;
+    color: #0071c2;
+    font-size: 16px;
+    font-weight: bolder;
+    background-color: white;
+    border: 2px solid #0071c2;
+    border-radius: 3px;
+}
+
+.register-button:hover, .sign-in-button:hover, button.page-3:hover {
+    cursor: pointer;
+    background-color: #dfeff8;
+}
+
+header nav li{
+    display: inline-block;
+    font-size: 20px;
+    padding: 15px;
+    color: white;
+}
+
+header nav {
+    transform: translateX(-15px);
+}
+
+header nav li:first-child::before {
+    content: '';
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    background-image: url(../images/bed.png);
+    background-size: 100%;
+    margin-right: 10px;
+    vertical-align: middle;
+    transform: translateY(-3px);
+}
+
+header nav li.page-2::before {
+    content: '';
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    background-image: url(../images/sunrise.svg);
+    background-size: 100%;
+    margin-right: 10px;
+    vertical-align: middle;
+    transform: translateY(-4px);
+}
+
+header nav li.page-5::before {
+    content: '';
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    background-image: url(../images/rating.png);
+    background-size: 100%;
+    margin-right: 10px;
+    vertical-align: middle;
+    transform: translateY(-4px);
+}
+
+header nav li:hover {
+    background-color: #315d9b;
+    cursor: pointer;
+}

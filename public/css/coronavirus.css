@@ -1,0 +1,42 @@
+.coronavirus {
+    background-color: #fff0e0;
+    padding-top: 15px;
+}
+
+.coronavirus-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.coronavirus-wrapper img {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.coronavirus h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+
+}
+
+.coronavirus h3::before {
+    content: '';
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    background-image: url(../images/info.png);
+    background-size: 100%;
+    margin-right: 10px;
+    vertical-align: middle;
+    transform: translateY(-3px);
+}
+
+.coronavirus p {
+    margin-bottom: 15px;
+}
+
+.coronavirus a {
+    display: inline-block;
+    margin-bottom: 10px;
+}

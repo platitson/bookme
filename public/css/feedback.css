@@ -1,0 +1,60 @@
+.feedback {
+    padding-top: 30px;
+    position: relative;
+}
+
+.feedback-form {
+    width: 500px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.feedback-form input, .feedback-form textarea {
+    margin: 15px 0 5px;
+    padding: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    width: 100%;
+}
+
+.feedback-form button, .thank-message button {
+    width: 100%;
+    height: 50px;
+    background-color: #315d9b;
+    border: none;
+    color: white;
+    font-size: 18px;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+.feedback-form button:hover, .thank-message button:hover {
+    cursor: pointer;
+}
+
+.feedback-error {
+    color: red;
+    margin-bottom: 5px;
+    display: none;
+}
+
+.thank-message {
+    position: absolute;
+    top: 200px; 
+    left: 120px;
+    text-align: center;
+    background-color: white;
+    padding: 30px;
+    border: 3px solid #dfeff8;
+    border-radius: 10px;
+}
+
+.thank-message {
+    display: none;
+}
+
+.page-5{
+    display: none;
+}
