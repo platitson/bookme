@@ -1,6 +1,9 @@
 const arrow = document.querySelector('.coronavirus-wrapper img');
 const contentCoronavirus = document.querySelector('.coronavirus-hidden');
-const readMoreLink = document.querySelector('.coronavirus-hidden a');
+
+window.addEventListener('load', () => {
+    contentCoronavirus.style.display = 'none';
+});
 
 function popupWindow() {
     if (contentCoronavirus.style.display === 'none'){
@@ -13,7 +16,3 @@ function popupWindow() {
 }
 
 arrow.addEventListener('click', popupWindow);
-
-readMoreLink.onclick = () => {
-    location.href = 'https://www.google.com/search?q=coronavirus';
-} // блокирует target="_blank"?
