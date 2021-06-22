@@ -8,6 +8,10 @@
     justify-content: space-between;
 }
 
+.coronavirus-wrapper:hover {
+    cursor: pointer;
+}
+
 .coronavirus-wrapper img {
     width: 20px;
     height: 20px;

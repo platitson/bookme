@@ -7,6 +7,7 @@ const signInButton = document.querySelector('.sign-in-button');
 const signInErrorMessage = document.querySelector('.sign-in-error');
 const closeFormButton = document.querySelector('.close-form');
 const personalAccountButton = document.querySelector('.page-3');
+const nameForWelcomeOnPersonalPage = document.querySelector('.personal-page-username');
 
 // Sign-in form
 function showSignInForm() {
@@ -77,6 +78,7 @@ function onContinueButtonClick() {
             signInButton.style.display = 'none';
             personalAccountButton.style.display = 'inline-block';
             personalAccountButton.innerHTML = loggedUserData.name;
+            welcomeBack();
         } else {
             signInErrorMessage.style.display = 'block';
         }
@@ -90,5 +92,12 @@ function nameDisplayCheckAfterReload() {
         signInButton.style.display = 'none';
         personalAccountButton.style.display = 'inline-block';
         personalAccountButton.innerHTML = localStorage.getItem('name');
+        welcomeBack();
+    }
+}
+
+function welcomeBack() {
+    if (localStorage.getItem('name')) {
+        nameForWelcomeOnPersonalPage.innerHTML = localStorage.getItem('name');
     }
 }

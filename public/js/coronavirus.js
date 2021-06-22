@@ -1,18 +1,19 @@
 const arrow = document.querySelector('.coronavirus-wrapper img');
-const contentCoronavirus = document.querySelector('.coronavirus-hidden');
+const contentCoronavirusHidden = document.querySelector('.coronavirus-hidden');
+const contentCoronavirusVisible = document.querySelector('.coronavirus-wrapper');
 
 window.addEventListener('load', () => {
-    contentCoronavirus.style.display = 'none';
+    contentCoronavirusHidden.style.display = 'none';
 });
 
 function popupWindow() {
-    if (contentCoronavirus.style.display === 'none'){
-        contentCoronavirus.style.display = 'block';
+    if (contentCoronavirusHidden.style.display === 'none'){
+        contentCoronavirusHidden.style.display = 'block';
         arrow.style.transform = "rotate(180deg)";
     } else {
-        contentCoronavirus.style.display = 'none';
+        contentCoronavirusHidden.style.display = 'none';
         arrow.style.transform = 'none';
     }
 }
 
-arrow.addEventListener('click', popupWindow);
+contentCoronavirusVisible.addEventListener('click', popupWindow);

@@ -58,3 +58,14 @@
 .page-5{
     display: none;
 }
+
+.feedbacks-wrapper {
+    padding-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.feedbacks-items {
+    width: 25%;
+    margin-bottom: 20px;
+}

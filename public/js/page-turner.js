@@ -13,6 +13,7 @@ window.addEventListener('load', () => {
 
 const showPage = (className) => {
     document.querySelector(`main div.${className}`).style.display = 'block';
+    location.href = `http://127.0.0.1:5500/public/index.html#page=${className}`;
 };
 
 const onLinkClick = (evt) => {
@@ -23,3 +24,11 @@ const onLinkClick = (evt) => {
 pages.forEach(item => {
     document.querySelector(`header .${item}`).addEventListener('click', onLinkClick);
 });
+
+function showFeedbacksPageForAdminOnly() {
+    if (localStorage.getItem('role') === 'admin') {
+        document.querySelector('main div.page-5').style.display = 'block';
+    } else {
+        location.href = 'http://127.0.0.1:5500/public/index.html';
+    }
+};
