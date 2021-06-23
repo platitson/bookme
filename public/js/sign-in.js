@@ -6,7 +6,7 @@ const password = document.querySelector('input.password');
 const signInButton = document.querySelector('.sign-in-button');
 const signInErrorMessage = document.querySelector('.sign-in-error');
 const closeFormButton = document.querySelector('.close-form');
-const personalAccountButton = document.querySelector('.page-3');
+const personalAccountButton = document.querySelector('.personal-page');
 const nameForWelcomeOnPersonalPage = document.querySelector('.personal-page-username');
 
 // Sign-in form

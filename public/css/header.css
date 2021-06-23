@@ -51,7 +51,7 @@ header {
     height: 30px;
 }
 
-button.page-4 {
+button.leave-your-feedback {
     padding: 10px;
     font-size: 16px;
     font-weight: bolder;
@@ -61,12 +61,12 @@ button.page-4 {
     border-radius: 3px;
 }
 
-button.page-4:hover {
+button.leave-your-feedback:hover {
     cursor: pointer;
     background-color: #315d9b;
 }
 
-.register-button, .sign-in-button, button.page-3 {
+.register-button, .sign-in-button, button.personal-page {
     padding: 10px;
     color: #0071c2;
     font-size: 16px;
@@ -76,7 +76,7 @@ button.page-4:hover {
     border-radius: 3px;
 }
 
-.register-button:hover, .sign-in-button:hover, button.page-3:hover {
+.register-button:hover, .sign-in-button:hover, button.personal-page:hover {
     cursor: pointer;
     background-color: #dfeff8;
 }
@@ -104,7 +104,7 @@ header nav li:first-child::before {
     transform: translateY(-3px);
 }
 
-header nav li.page-2::before {
+header nav li.inspiration::before {
     content: '';
     width: 25px;
     height: 25px;
@@ -116,7 +116,7 @@ header nav li.page-2::before {
     transform: translateY(-4px);
 }
 
-header nav li.page-5::before {
+header nav li.feedbacks::before {
     content: '';
     width: 25px;
     height: 25px;

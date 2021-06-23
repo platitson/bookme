@@ -1,4 +1,4 @@
-const pages = ['page-1', 'page-2', 'page-3', 'page-4', 'page-5'];
+const pages = ['stays', 'inspiration', 'personal-page', 'leave-your-feedback', 'feedbacks'];
 
 const hidePages = () => {
     pages.forEach(item => {
@@ -8,7 +8,12 @@ const hidePages = () => {
 
 window.addEventListener('load', () => {
     hidePages();
-    document.querySelector('main div.page-1').style.display = 'block';
+    if (location.href != 'http://127.0.0.1:5500/public/index.html') {
+        const linkEnd = location.href.split('#page=')[1];
+        showPage(linkEnd);
+    } else {
+        document.querySelector('main div.stays').style.display = 'block';
+    }
 });
 
 const showPage = (className) => {

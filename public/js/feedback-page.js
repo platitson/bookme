@@ -1,5 +1,5 @@
-const feedbacksPage = document.querySelectorAll('.page-5')[1];
-const feedbacksPageButton = document.querySelectorAll('.page-5')[0];
+const feedbacksPage = document.querySelectorAll('.feedbacks')[1];
+const feedbacksPageButton = document.querySelectorAll('.feedbacks')[0];
 
 function showFeedbacksPageButton() {
     if (localStorage.getItem('role') === 'admin') {
