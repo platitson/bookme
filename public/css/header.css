@@ -132,3 +132,8 @@ header nav li:hover {
     background-color: #315d9b;
     cursor: pointer;
 }
+
+#clock {
+    color: white;
+    font-size: 20px;
+}

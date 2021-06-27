@@ -51,8 +51,16 @@ feedbackForm.addEventListener('submit', (evt) => {
         // thankMessageButton.addEventListener('click', hideThankMessage);
 
         //18.3
+        // showThankMessage();
+        // setTimeout(hideThankMessage, 2000);
+
+        //20.5
         showThankMessage();
-        setTimeout(hideThankMessage, 2000);
+        thankMessage.addEventListener('click', (event) => {
+            let target = event.target;
+            if (target.tagName != 'BUTTON') return;
+            hideThankMessage();
+        });
 
         const feedbackNumber = Number(localStorage.length) + 1;
         localStorage.setItem(`feedback-${feedbackNumber}`, JSON.stringify({'feedbackName': `${feedbackFields[0].value}`, 'feedbackSurname': `${feedbackFields[1].value}`, 'feedbackEmail': `${feedbackFields[2].value}`, 'feedbackMessage': `${feedbackFields[3].value}`}));
