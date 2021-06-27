@@ -1,4 +1,4 @@
-.feedback {
+.leave-your-feedback {
     padding-top: 30px;
     position: relative;
 }
@@ -55,6 +55,17 @@
     display: none;
 }
 
-.page-5{
+.feedbacks{
     display: none;
+}
+
+.feedbacks-wrapper {
+    padding-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.feedbacks-items {
+    width: 25%;
+    margin-bottom: 20px;
 }

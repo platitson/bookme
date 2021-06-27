@@ -4,4 +4,5 @@ import './page-turner.js';
 import './log-out.js';
 import './destinations-turner.js';
 import './destinations-builder.js';
-import './feedback.js';
+import './feedback-form.js';
+import './feedback-page.js';

@@ -19,6 +19,9 @@ module.exports = {
     "no-console": "off",
     "no-alert": "off",
     "linebreak-style": 0,
-    "no-var": 0
+    "no-var": 0,
+    "no-plusplus": "off",
+    "eol-last": ["error", "never"],
+    "no-extra-semi": ["error", "never"]
   },
 };

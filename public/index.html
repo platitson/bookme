@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <script src="https://kit.fontawesome.com/7357311aee.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -23,23 +24,23 @@
             <div class="header-items">
               <button class="currency-button">EUR</button>
               <button class="lang-button"><img src="images/languages/english.png" alt=""></button>
-              <button class="page-4">Leave your feedback</button>
+              <button class="leave-your-feedback">Leave your feedback</button>
               <button class="register-button">Register</button>
               <button class="sign-in-button">Sign in</button>
-              <button class="page-3"></button> <!-- The button for user personal account -->
+              <button class="personal-page"></button> <!-- The button for user personal account -->
             </div>
           </div>
           <nav>
             <ul>
-              <li class="page-1">Stays</li>
-              <li class="page-2">Inspiration</li>
-              <li class="page-5">Feedbacks</li>
+              <li class="stays">Stays</li>
+              <li class="inspiration">Inspiration</li>
+              <li class="feedbacks">Feedbacks</li>
             </ul>
           </nav>
         </div>
       </header>
       <main>
-        <div class="page-1">
+        <div class="stays">
           <div class="coronavirus">
             <div class="container">
               <div class="coronavirus-wrapper">
@@ -171,8 +172,8 @@
           </div>
         </div>
 
-        <div class="page-2">
-          <div class="container inspiration">
+        <div class="inspiration">
+          <div class="container">
             <h1>Get inspiration for your next trip</h1>
             <div class="inspiration-wrapper">
               <a href="#" class="inspiration-items pool">
@@ -223,14 +224,62 @@
           </div>
         </div>
 
-        <div class="page-3">
+        <div class="personal-page">
           <div class="container">
-            <button class="log-out">Log Out</button>
+            <section>
+              <div>
+                <h1>Welcome back, <span class="personal-page-username"></span>.</h1>
+                <p>Manage your Bookme.com experience</p>
+              </div>
+              <button class="log-out">Log Out</button>
+            </section>
+            <div class="personal-page-wrapper">
+              <a href="#" class="personal-page-item">
+                <p><i class="far fa-user"></i></p>
+                <div>
+                  <h2>Personal details</h2>
+                <p>Update your info and find out how it's used.</p>
+                <p class="pseudolink">Manage personal details</p>
+                </div>               
+              </a>
+              <a href="#" class="personal-page-item">
+                <p><i class="far fa-list-alt"></i></p>
+                <div>
+                  <h2>Preferences</h2>
+                <p>Change your language, currency, and accessibility requirements.</p>
+                <p class="pseudolink">Manage preferences</p>
+                </div>               
+              </a>
+              <a href="#" class="personal-page-item">
+                <p><i class="fas fa-fingerprint"></i></p>
+                <div>
+                  <h2>Security</h2>
+                <p>Adjust your security settings and set up two-factor authentication.</p>
+                <p class="pseudolink">Manage account security</p>
+                </div>
+              </a>
+              <a href="#" class="personal-page-item">
+                <p><i class="far fa-credit-card"></i></p>
+                <div>
+                  <h2>Payment details</h2>
+                <p>Securely add or remove payment methods to make it easier when you book.</p>
+                <p class="pseudolink">Manage payment details</p>
+                </div>
+              </a>
+              <a href="#" class="personal-page-item">
+                <p><i class="far fa-bell"></i></p>
+                <div>
+                  <h2>Email notifications</h2>
+                <p>Decide what you want to be notified about and unsubscribe from what you don't.</p>
+                <p class="pseudolink">Manage notifications</p>
+                </div>
+              </a>
+            </div>
           </div>
         </div>
 
-        <div class="page-4">
-          <div class="container feedback">
+        <div class="leave-your-feedback">
+          <div class="container">
             <h1>Share your experience with this website</h1>
             <p>Your feedback is very important to us.</p>
             <form action="#" class="feedback-form">
@@ -247,7 +296,7 @@
           </div>
         </div>
 
-        <div class="page-5">
+        <div class="feedbacks">
         </div>
       </main>
     </div>
