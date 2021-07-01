@@ -2,26 +2,20 @@ const feedbackForm = document.querySelector('form.feedback-form');
 const feedbackFields = Array.from(feedbackForm.querySelectorAll('.feedback-field'));
 const thankMessage = document.querySelector('.thank-message');
 const thankMessageButton = document.querySelector('.thank-message button');
-
-function removeErrorMessages() {
-    const errorMessages = document.querySelectorAll('.error-message');
-    for (let i = 0; i < errorMessages.length; i++) {
-        errorMessages[i].remove();
-    };
-};
-
-feedbackFields.forEach(el => el.addEventListener('keyup', removeErrorMessages));
+const errorMessages = Array.from(document.querySelectorAll('.feedback-error-message'));
 
 function checkFieldsPresence() {
     for (let i = 0; i < feedbackFields.length; i++) {
         if (!feedbackFields[i].value) {
-            const errorMessage = document.createElement('p');
-            errorMessage.innerHTML = 'Please, fill in this field';
-            errorMessage.className = 'error-message';
-            errorMessage.style.color = 'red';
-            feedbackFields[i].after(errorMessage);
+            errorMessages[i].style.display = 'block';
         };
     };
+};
+
+function removeErrorMessages() {
+    for (let i = 0; i < feedbackFields.length; i++) {
+        errorMessages[i].style.display = 'none';
+    }
 };
 
 function showThankMessage() {
@@ -63,9 +57,14 @@ feedbackForm.addEventListener('submit', (evt) => {
         });
 
         const feedbackNumber = Number(localStorage.length) + 1;
-        localStorage.setItem(`feedback-${feedbackNumber}`, JSON.stringify({'feedbackName': `${feedbackFields[0].value}`, 'feedbackSurname': `${feedbackFields[1].value}`, 'feedbackEmail': `${feedbackFields[2].value}`, 'feedbackMessage': `${feedbackFields[3].value}`}));
+        localStorage.setItem(`feedback-${feedbackNumber}`, JSON.stringify({ 'feedbackName': `${feedbackFields[0].value}`, 'feedbackSurname': `${feedbackFields[1].value}`, 'feedbackEmail': `${feedbackFields[2].value}`, 'feedbackMessage': `${feedbackFields[3].value}` }));
         feedbackFields.forEach(el => clearField(el));
     } else {
         checkFieldsPresence();
     }
 });
+
+feedbackFields.forEach(el => el.addEventListener('keyup', (evt) => {
+    let i = feedbackFields.indexOf(evt.currentTarget);
+    errorMessages[i].style.display = 'none';
+}));

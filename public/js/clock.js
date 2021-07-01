@@ -1,25 +1,25 @@
-const clock = document.getElementById('clock');
+function Clock({ clock }) {
+  this.element = clock;
+}
 
-function updateTime() {
+Clock.prototype.updateTime = function() {
     let date = new Date();
     let hours = date.getHours();
     if (hours < 10) hours = '0' + hours;
-    clock.children[0].innerHTML = hours;
+    this.element.children[0].innerHTML = hours;
   
     let minutes = date.getMinutes();
     if (minutes < 10) minutes = '0' + minutes;
-    clock.children[1].innerHTML = minutes;
+    this.element.children[1].innerHTML = minutes;
   
     let seconds = date.getSeconds();
     if (seconds < 10) seconds = '0' + seconds;
-    clock.children[2].innerHTML = seconds;
+    this.element.children[2].innerHTML = seconds;
   };
 
-let timerId;
-
-function clockStart() { 
-  timerId = setInterval(updateTime, 1000);
-  updateTime();
+Clock.prototype.clockStart = function() { 
+  setInterval(() => { this.updateTime(); }, 1000);
+  this.updateTime();
 };
 
-clockStart()
+export { Clock };

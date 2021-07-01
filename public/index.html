@@ -231,13 +231,8 @@
 
         <div class="personal-page">
           <div class="container">
-            <section>
-              <div>
-                <h1>Welcome back, <span class="personal-page-username"></span>.</h1>
-                <p>Manage your Bookme.com experience</p>
-              </div>
-              <button class="log-out">Log Out</button>
-            </section>
+            <h1>Welcome back, <span class="personal-page-username"></span>.</h1>
+            <p>Manage your Bookme.com experience</p>
             <div class="personal-page-wrapper">
               <a href="#" class="personal-page-item">
                 <p><i class="far fa-user"></i></p>
@@ -280,6 +275,9 @@
                 </div>
               </a>
             </div>
+            <div class="log-out">
+              <button class="log-out">Log Out</button>
+            </div>
           </div>
         </div>
 
@@ -289,10 +287,14 @@
             <p>Your feedback is very important to us.</p>
             <form action="#" class="feedback-form">
               <input type="text" class="first-name feedback-field" placeholder="First name">
+              <p class="feedback-error-message">Please, fill in your name</p>
               <input type="text" class="last-name feedback-field" placeholder="Last name">
+              <p class="feedback-error-message">Please, fill in your surname</p>
               <input type="email" class="email feedback-field" placeholder="Your e-mail">
+              <p class="feedback-error-message">Please, fill in your e-mail</p>
               <textarea name="message" class="feedback-field" id="feedback-message" cols="30" rows="10"
-                placeholder="Leave your message here..."></textarea>
+              placeholder="Leave your message here..."></textarea>
+              <p class="feedback-error-message">Please, fill in your message</p>
               <button name="submit">Send</button>
             </form>
             <div class="thank-message">
@@ -303,6 +305,7 @@
         </div>
 
         <div class="feedbacks">
+          <div class="container feedbacks-wrapper"></div>
         </div>
       </main>
     </div>

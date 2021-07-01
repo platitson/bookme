@@ -13,20 +13,17 @@ const inactivateButtons = () => {
     });
 };
 
-window.addEventListener('load', () => {
-    hideBlocks();
-    inactivateButtons();
-    document.querySelector('.destinations div.regions').style.display = 'flex';
-    document.querySelector('.destinations li.regions').classList.remove('destinations-inactive');
-    document.querySelector('.destinations li.regions').classList.add('destinations-active');
-});
-
 const showBlock = (className) => {
-    document.querySelector(`.destinations div.${className}`).style.display = 'flex';
     inactivateButtons();
+    document.querySelector(`.destinations div.${className}`).style.display = 'flex';
     document.querySelector(`.destinations li.${className}`).classList.remove('destinations-inactive');
     document.querySelector(`.destinations li.${className}`).classList.add('destinations-active');
 };
+
+window.addEventListener('load', () => {
+    hideBlocks();
+    showBlock('regions');
+});
 
 const onLinkClick = (evt) => {
     hideBlocks();

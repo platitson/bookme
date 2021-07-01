@@ -41,6 +41,10 @@
     transform: translateY(2px);
 }
 
+.search-box form button:hover {
+    background-color: #315d9b;
+}
+
 .search-box input[type="checkbox"] {
     cursor: pointer;
 }
