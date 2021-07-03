@@ -6,20 +6,22 @@ const hidePages = () => {
     });
 };
 
+const showPage = (className) => {
+    document.querySelector(`main div.${className}`).style.display = 'block';
+    location.href = `#page=${className}`;
+};
+
 window.addEventListener('load', () => {
     hidePages();
-    if (location.href != 'http://127.0.0.1:5500/public/index.html') {
+    if (location.hash === '#page=feedbacks' && localStorage.getItem('role') === 'admin') {
+        showPage('feedbacks');
+    } else if (location.hash && location.hash !== '#page=feedbacks') {
         const linkEnd = location.href.split('#page=')[1];
         showPage(linkEnd);
     } else {
-        document.querySelector('main div.stays').style.display = 'block';
+        showPage('stays');
     }
 });
-
-const showPage = (className) => {
-    document.querySelector(`main div.${className}`).style.display = 'block';
-    location.href = `http://127.0.0.1:5500/public/index.html#page=${className}`;
-};
 
 const onLinkClick = (evt) => {
     hidePages();
@@ -29,11 +31,3 @@ const onLinkClick = (evt) => {
 pages.forEach(item => {
     document.querySelector(`header .${item}`).addEventListener('click', onLinkClick);
 });
-
-function showFeedbacksPageForAdminOnly() {
-    if (localStorage.getItem('role') === 'admin') {
-        document.querySelector('main div.page-5').style.display = 'block';
-    } else {
-        location.href = 'http://127.0.0.1:5500/public/index.html';
-    }
-};

@@ -8,6 +8,7 @@ const signInErrorMessage = document.querySelector('.sign-in-error');
 const closeFormButton = document.querySelector('.close-form');
 const personalAccountButton = document.querySelector('.personal-page');
 const nameForWelcomeOnPersonalPage = document.querySelector('.personal-page-username');
+const feedbacksPageButton = document.querySelectorAll('.feedbacks')[0];
 
 // Sign-in form
 function showSignInForm() {
@@ -60,6 +61,7 @@ const users = [
 window.addEventListener('load', () => {
     personalAccountButton.style.display = 'none';
     nameDisplayCheckAfterReload();
+    showFeedbacksPageButton();
 });
 
 function onContinueButtonClick() {
@@ -79,6 +81,7 @@ function onContinueButtonClick() {
             personalAccountButton.style.display = 'inline-block';
             personalAccountButton.innerHTML = loggedUserData.name;
             welcomeBack();
+            showFeedbacksPageButton();
         } else {
             signInErrorMessage.style.display = 'block';
         }
@@ -101,3 +104,9 @@ function welcomeBack() {
         nameForWelcomeOnPersonalPage.innerHTML = localStorage.getItem('name');
     }
 }
+
+function showFeedbacksPageButton() {
+    if (localStorage.getItem('role') === 'admin') {
+        feedbacksPageButton.style.display = 'inline-block';
+    };
+};

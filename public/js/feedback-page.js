@@ -1,16 +1,16 @@
-const feedbacksPage = document.querySelectorAll('.feedbacks')[1];
-const feedbacksPageButton = document.querySelectorAll('.feedbacks')[0];
-
-function showFeedbacksPageButton() {
-    if (localStorage.getItem('role') === 'admin') {
-        feedbacksPageButton.style.display = 'inline-block';
-    }; // после регистрации админу нужно обновить страницу, чтобы появилось
-};
-
-showFeedbacksPageButton();
+const feedbacksWrapper = document.querySelector('.feedbacks-wrapper');
 
 const feedbacks = [];
 
+
+const noFeedbacksMessage = () => {
+    if (feedbacks.length === 0) {
+        const message = document.createElement('h1');
+        message.innerHTML = 'So far no one has written anything for you...';
+        feedbacksWrapper.appendChild(message);
+        return message;
+    }
+}
 function Feedbacks() {};
 
 Feedbacks.prototype.init = function() {
@@ -20,9 +20,8 @@ Feedbacks.prototype.init = function() {
             feedbacks.push(feedback);
         }
     }
-    const feedbacksWrapper = document.createElement('div');
-    feedbacksWrapper.classList.add('container');
-    feedbacksWrapper.classList.add('feedbacks-wrapper');
+
+    noFeedbacksMessage();
     
     feedbacks.map(el => {
         const feedbackOnPage = document.createElement('div');
@@ -36,9 +35,8 @@ Feedbacks.prototype.init = function() {
         feedbackOnPage.appendChild(feedbackName);
         feedbackOnPage.appendChild(feedbackEmail);
         feedbackOnPage.appendChild(feedbackMessage);
-        feedbacksWrapper.appendChild( feedbackOnPage);
-        feedbacksPage.appendChild(feedbacksWrapper);
-        return feedbacksPage;
+        feedbacksWrapper.appendChild(feedbackOnPage);
+        return feedbacksWrapper;
     })
 }
 
