@@ -38,9 +38,7 @@
                 <li class="feedbacks">Feedbacks</li>
               </ul>
             </nav>
-            <div id="clock">
-              <span class="hour">hh</span>:<span class="min">mm</span>:<span class="sec">ss</span>
-            </div>
+            <div class="colored-clock"></div>
           </div>
         </div>
       </header>
@@ -65,9 +63,21 @@
               <h1>Find deals on hotels, homes and much more...</h1>
               <p>From cosy country homes to funky city flats</p>
               <form action="#">
-                <input type="text" placeholder="Where are you going?">
-                <input type="date">
-                <input type="number" value="2">
+                <div class="place-input">
+                  <input type="text" placeholder="Where are you going?">
+                </div>
+                <div class="date-input">
+                  <label for="date-from">From</label>
+                  <input id="date-from" type="date">
+                </div>
+                <div class="date-input">
+                  <label for="date-to">To</label>
+                  <input id="date-to" type="date">
+                </div>
+                <div class="amount-input">
+                  <input id="person-amount" type="number" value="2">
+                  <label for="person-amount">people</label>
+                </div>
                 <button type="submit">Search</button>
               </form>
               <input type="checkbox">
@@ -293,7 +303,7 @@
               <input type="email" class="email feedback-field" placeholder="Your e-mail">
               <p class="feedback-error-message">Please, fill in your e-mail</p>
               <textarea name="message" class="feedback-field" id="feedback-message" cols="30" rows="10"
-              placeholder="Leave your message here..."></textarea>
+                placeholder="Leave your message here..."></textarea>
               <p class="feedback-error-message">Please, fill in your message</p>
               <button name="submit">Send</button>
             </form>
