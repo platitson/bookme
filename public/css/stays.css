@@ -16,6 +16,7 @@
     height: 60px;
     border: 5px solid #febb02;
     border-radius: 5px;
+    outline: none;
     display: inline-block;
     background-color: white;
     font-size: 14px;
