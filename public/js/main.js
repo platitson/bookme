@@ -11,9 +11,11 @@ import './translations.js';
 import { Clock } from './clock.js';
 import { Translation } from './translations.js';
 import { LanguageMenu } from './language-select.js';
+import { ColoredClock } from './colored-clock.js';
 
-const clock = new Clock({
-    clock: document.getElementById('clock')
+const coloredClock = new ColoredClock({
+    element: document.querySelector('.colored-clock'),
+    color: 'white',
 });
 
 clock.clockStart();
@@ -23,3 +25,5 @@ t.init();
 t.initPassTranslationEventListener();
 
 const languageMenu = new LanguageMenu(t);
+
+coloredClock.clockStart();

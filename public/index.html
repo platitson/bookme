@@ -44,9 +44,7 @@
                 <li data-key="feedbacks" class="feedbacks">Feedbacks</li>
               </ul>
             </nav>
-            <div id="clock">
-              <span class="hour">hh</span>:<span class="min">mm</span>:<span class="sec">ss</span>
-            </div>
+            <div class="colored-clock"></div>
           </div>
         </div>
       </header>
@@ -74,6 +72,23 @@
                 <input type="date">
                 <input type="number" value="2">
                 <button data-key="search" type="submit">Search</button>
+=======
+                <div class="place-input">
+                  <input type="text" placeholder="Where are you going?">
+                </div>
+                <div class="date-input">
+                  <label for="date-from">From</label>
+                  <input id="date-from" type="date">
+                </div>
+                <div class="date-input">
+                  <label for="date-to">To</label>
+                  <input id="date-to" type="date">
+                </div>
+                <div class="amount-input">
+                  <input id="person-amount" type="number" value="2">
+                  <label for="person-amount">people</label>
+                </div>
+                <button type="submit">Search</button>
               </form>
               <input type="checkbox">
               <label data-key="work" for="checkbox">I'm travelling for work</label>
@@ -301,6 +316,9 @@
               placeholder="Leave your message here..."></textarea>
               <p data-key="emmessage" class="feedback-error-message">Please, fill in your message</p>
               <button data-key="send" name="submit">Send</button>
+                placeholder="Leave your message here..."></textarea>
+              <p class="feedback-error-message">Please, fill in your message</p>
+              <button name="submit">Send</button>
             </form>
             <div class="thank-message">
               <p data-key="thank">Thank you for your feedback!</p>

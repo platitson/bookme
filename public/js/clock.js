@@ -1,25 +1,24 @@
-function Clock({ clock }) {
-  this.element = clock;
+function Clock({ element }) {
+  this.element = element;
 }
 
-Clock.prototype.updateTime = function() {
-    let date = new Date();
-    let hours = date.getHours();
-    if (hours < 10) hours = '0' + hours;
-    this.element.children[0].innerHTML = hours;
-  
-    let minutes = date.getMinutes();
-    if (minutes < 10) minutes = '0' + minutes;
-    this.element.children[1].innerHTML = minutes;
-  
-    let seconds = date.getSeconds();
-    if (seconds < 10) seconds = '0' + seconds;
-    this.element.children[2].innerHTML = seconds;
-  };
+const udpateTime = function () {
+  const date = new Date();
 
-Clock.prototype.clockStart = function() { 
-  setInterval(() => { this.updateTime(); }, 1000);
-  this.updateTime();
+  const hours = date.getHours();
+  const currentHours = `${hours < 10 ? `0${hours}` : hours}`;
+
+  const minutes = date.getMinutes();
+  const currentMinutes = `${minutes < 10 ? `0${minutes}` : minutes}`;
+
+  const seconds = date.getSeconds();
+  const currentSeconds = `${seconds < 10 ? `0${seconds}` : seconds}`;
+
+  this.element.innerHTML = `${currentHours}:${currentMinutes}:${currentSeconds}`;
+};
+
+Clock.prototype.clockStart = function () {
+  setInterval(udpateTime.bind(this), 1000);
 };
 
 export { Clock };

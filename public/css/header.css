@@ -173,7 +173,6 @@ header nav li:hover {
     cursor: pointer;
 }
 
-#clock {
-    color: white;
+.colored-clock {
     font-size: 20px;
 }
