@@ -6,10 +6,11 @@ import './destinations-turner.js';
 import './destinations-builder.js';
 import './feedback-form.js';
 import './feedback-page.js';
-import { Clock } from './clock.js';
+import { ColoredClock } from './colored-clock.js';
 
-const clock = new Clock({
-    clock: document.getElementById('clock')
+const coloredClock = new ColoredClock({
+    element: document.querySelector('.colored-clock'),
+    color: 'white',
 });
 
-clock.clockStart();
+coloredClock.clockStart();
