@@ -24,18 +24,24 @@
             <div class="header-items">
               <button class="currency-button">EUR</button>
               <button class="lang-button"><img src="images/languages/english.png" alt=""></button>
-              <button class="leave-your-feedback">Leave your feedback</button>
-              <button class="register-button">Register</button>
-              <button class="sign-in-button">Sign in</button>
-              <button class="personal-page"></button> <!-- The button for user personal account -->
+              <div class="select-language">
+                <div class="close-language-form"></div>
+                <h3>Select your language</h3>
+                <button data-language-key="EN" class="lang-button select-language-button"><img src="images/languages/english.png" alt=""></button>
+                <button data-language-key="CZ" class="lang-button select-language-button"><img src="images/languages/czech.png" alt=""></button>
+              </div>
+              <button data-key="leave" class="leave-your-feedback">Leave your feedback</button>
+              <button data-key="register" class="register-button">Register</button>
+              <button data-key="sign" class="sign-in-button">Sign in</button>
+              <button class="personal-page"></button>
             </div>
           </div>
           <div class="header-wrapper">
             <nav>
               <ul>
-                <li class="stays">Stays</li>
-                <li class="inspiration">Inspiration</li>
-                <li class="feedbacks">Feedbacks</li>
+                <li data-key="stays" class="stays">Stays</li>
+                <li data-key="inspiration" class="inspiration">Inspiration</li>
+                <li data-key="feedbacks" class="feedbacks">Feedbacks</li>
               </ul>
             </nav>
             <div id="clock">
@@ -49,124 +55,123 @@
           <div class="coronavirus">
             <div class="container">
               <div class="coronavirus-wrapper">
-                <h3>Coronavirus (COVID-19) Support</h3>
+                <h3 data-key="coronavirus">Coronavirus (COVID-19) Support</h3>
                 <img src="images/arrow.png" alt="">
               </div>
               <div class="coronavirus-hidden">
-                <p>Please check for travel restrictions. Travel may be permitted only for certain purposes and in
-                  particular, touristic travel may not be allowed.</p>
-                <a href="https://www.google.com/search?q=coronavirus" target="_blank">Read more</a>
+                <p data-key="restrictions">Please check for travel restrictions. Travel may be permitted only for certain purposes and in particular, touristic travel may not be allowed.</p>
+                <a data-key="more" href="https://www.google.com/search?q=coronavirus" target="_blank">Read more</a>
               </div>
             </div>
           </div>
 
           <div class="search-box">
             <div class="container">
-              <h1>Find deals on hotels, homes and much more...</h1>
-              <p>From cosy country homes to funky city flats</p>
+              <h1 data-key="find">Find deals on hotels, homes and much more...</h1>
+              <p data-key="cosy">From cosy country homes to funky city flats</p>
               <form action="#">
                 <input type="text" placeholder="Where are you going?">
                 <input type="date">
                 <input type="number" value="2">
-                <button type="submit">Search</button>
+                <button data-key="search" type="submit">Search</button>
               </form>
               <input type="checkbox">
-              <label for="checkbox">I'm travelling for work</label>
+              <label data-key="work" for="checkbox">I'm travelling for work</label>
             </div>
           </div>
 
           <div class="explore container">
-            <h2>Explore Czech Republic</h2>
-            <p>These popular destinations have a lot to offer</p>
+            <h2 data-key="explore">Explore Czech Republic</h2>
+            <p data-key="popular">These popular destinations have a lot to offer</p>
             <div class="explore-wrapper">
               <a href="#" class="prague explore-items">
                 <img src="images/cities/prague.jpg" alt="">
-                <h3>Prague</h3>
-                <p><span>4,915</span> properties</p>
+                <h3 data-key="prague">Prague</h3>
+                <p><span>4,915</span> <span data-key="properties">properties</span></p>
               </a>
               <a href="#" class="brno explore-items">
                 <img src="images/cities/brno.jpg" alt="">
-                <h3>Brno</h3>
-                <p><span>446</span> properties</p>
+                <h3 data-key="brno">Brno</h3>
+                <p><span>446</span> <span data-key="properties">properties</span></p>
               </a>
               <a href="#" class="karlovy-vary explore-items">
                 <img src="images/cities/karlovyvary.jpg" alt="">
-                <h3>Karlovy Vary</h3>
-                <p><span>528</span> properties</p>
+                <h3 data-key="vary">Karlovy Vary</h3>
+                <p><span>528</span> <span data-key="properties">properties</span></p>
               </a>
               <a href="#" class="krkonose explore-items">
                 <img src="images/cities/krkonose.jpg" alt="">
-                <h3>Krkonose</h3>
-                <p><span>1,641</span> properties</p>
+                <h3 data-key="krkonose">Krkonose</h3>
+                <p><span>1,641</span> <span data-key="properties">properties</span></p>
               </a>
               <a href="#" class="cesky-krumlov explore-items">
                 <img src="images/cities/ceskykrumlov.jpg" alt="">
-                <h3>Cesky Krumlov</h3>
-                <p><span>269</span> properties</p>
+                <h3 data-key="krumlov">Cesky Krumlov</h3>
+                <p><span>269</span> <span data-key="properties">properties</span></p>
               </a>
             </div>
           </div>
 
           <div class="offers-wrapper container">
             <div class="offers-items offers-prague">
-              <h1>Prague</h1>
-              <p><span>4,915</span> properties</p>
+              <h1 data-key="prague">Prague</h1>
+              <p><span>4,915</span> <span data-key="properties">properties</span></p>
               <div class="price">
-                <p>Average price<br>€ <span>86.68</span></p>
+                <p><span data-key="price">Average price</span><br>€ <span>86.68</span></p>
               </div>
             </div>
             <div class="offers-items offers-copenhagen">
-              <h1>Copenhagen</h1>
-              <p><span>1,099</span> properties</p>
+              <h1 data-key="copenhagen">Copenhagen</h1>
+              <p><span>1,099</span> <span data-key="properties">properties</span></p>
               <div class="price">
-                <p>Average price<br>€ <span>149,87</span></p>
+                <p><span data-key="price">Average price</span><br>€ <span>149,87</span></p>
               </div>
             </div>
             <div class="offers-items offers-vienna">
-              <h1>Vienna</h1>
-              <p><span>3,114</span> properties</p>
+              <h1 data-key="vienna">Vienna</h1>
+              <p><span>3,114</span> <span data-key="properties">properties</span></p>
               <div class="price">
-                <p>Average price<br>€ <span>135,86</span></p>
+                <p><span data-key="price">Average price</span><br>€ <span>135,86</span></p>
               </div>
             </div>
             <div class="offers-items offers-budapest">
-              <h1>Budapest</h1>
-              <p><span>6,249</span> properties</p>
+              <h1 data-key="budapest">Budapest</h1>
+              <p><span>6,249</span> <span data-key="properties">properties</span></p>
               <div class="price">
-                <p>Average price<br>€ <span>99,81</span></p>
+                <p><span data-key="price">Average price</span><br>€ <span>99,81</span></p>
               </div>
             </div>
             <div class="offers-items offers-berlin">
-              <h1>Berlin</h1>
-              <p><span>1,749</span> properties</p>
+              <h1 data-key="berlin">Berlin</h1>
+              <p><span>1,749</span> <span data-key="properties">properties</span></p>
               <div class="price">
-                <p>Average price<br>€ <span>90,93</span></p>
+                <p><span data-key="price">Average price</span><br>€ <span>90,93</span></p>
               </div>
             </div>
           </div>
 
           <div class="connect container">
-            <h2>Connect with other travellers</h2>
+            <h2 data-key="connect">Connect with other travellers</h2>
             <div class="connect-wrapper">
               <a href="#" class="connect-items">
                 <img src="images/connect/cz.jpeg" alt="">
-                <h3>Czech Republic</h3>
-                <p>Travel community</p>
+                <h3 data-key="czech">Czech Republic</h3>
+                <p data-key="community">Travel community</p>
               </a>
               <a href="#" class="connect-items">
                 <img src="images/connect/denmark.jpeg" alt="">
-                <h3>Denmark</h3>
-                <p>Travel community</p>
+                <h3 data-key="denmark">Denmark</h3>
+                <p data-key="community">Travel community</p>
               </a>
               <a href="#" class="connect-items">
                 <img src="images/connect/poland.jpeg" alt="">
-                <h3>Poland</h3>
-                <p>Travel community</p>
+                <h3 data-key="poland">Poland</h3>
+                <p data-key="community">Travel community</p>
               </a>
               <a href="#" class="connect-items">
                 <img src="images/connect/talk.jpeg" alt="">
-                <h3>Travel talk</h3>
-                <p>General Discussion</p>
+                <h3 data-key="talk">Travel talk</h3>
+                <p data-key="discussion">General Discussion</p>
               </a>
               <!-- <a href="#" class="connect-items">
               <img src="images/connect/more.png" alt="">
@@ -179,48 +184,48 @@
 
         <div class="inspiration">
           <div class="container">
-            <h1>Get inspiration for your next trip</h1>
+            <h1 data-key="inspirate">Get inspiration for your next trip</h1>
             <div class="inspiration-wrapper">
               <a href="#" class="inspiration-items pool">
                 <div>
-                  <h2>5 breathtaking stays with a private pool</h2>
-                  <p>Enjoy your holiday reclining by a private infinity pool or a panoramic plunge pool.</p>
+                  <h2 data-key="pool">5 breathtaking stays with a private pool</h2>
+                  <p data-key="enjoy">Enjoy your holiday reclining by a private infinity pool or a panoramic plunge pool.</p>
                 </div>
               </a>
               <a href="#" class="inspiration-items berlin">
                 <div>
-                  <h2>Must-visit music venues in Berlin by ela.</h2>
-                  <p>Techno factories, beach bars and piano shrines – 6 favourites from a Eurovision Legend</p>
+                  <h2 data-key="venues">Must-visit music venues in Berlin by ela.</h2>
+                  <p data-key="techno">Techno factories, beach bars and piano shrines – 6 favourites from a Eurovision Legend</p>
                 </div>
               </a>
               <a href="#" class="inspiration-items spa">
                 <div>
-                  <h2>5 of the UK’s best, affordable spa resorts</h2>
-                  <p>Luxury that won’t break the budget.</p>
+                  <h2 data-key="spa">5 of the UK’s best, affordable spa resorts</h2>
+                  <p data-key="luxury">Luxury that won’t break the budget.</p>
                 </div>
               </a>
               <a href="#" class="inspiration-items portugal">
                 <div>
-                  <h2>A local guide to travelling in Portugal</h2>
-                  <p>Follow in the footsteps of local travellers and discover a new side to Portugal.</p>
+                  <h2 data-key="portugal">A local guide to travelling in Portugal</h2>
+                  <p data-key="footsteps">Follow in the footsteps of local travellers and discover a new side to Portugal.</p>
                 </div>
               </a>
               <a href="#" class="inspiration-items ski">
                 <div>
-                  <h2>The best European ski resorts to visit this summer</h2>
-                  <p>From hiking to white water rafting, summer brings out the best in these resorts.</p>
+                  <h2 data-key="ski">The best European ski resorts to visit this summer</h2>
+                  <p data-key="hiking">From hiking to white water rafting, summer brings out the best in these resorts.</p>
                 </div>
               </a>
             </div>
           </div>
 
           <div class="destinations container">
-            <h1>Destinations we love</h1>
+            <h1 data-key="destinations">Destinations we love</h1>
             <nav>
               <ul>
-                <li class="regions">Regions</li>
-                <li class="cities">Cities</li>
-                <li class="places">Places of interest</li>
+                <li data-key="regions" class="regions">Regions</li>
+                <li data-key="cities" class="cities">Cities</li>
+                <li data-key="places" class="places">Places of interest</li>
               </ul>
             </nav>
             <div class="regions"></div>
@@ -231,74 +236,74 @@
 
         <div class="personal-page">
           <div class="container">
-            <h1>Welcome back, <span class="personal-page-username"></span>.</h1>
-            <p>Manage your Bookme.com experience</p>
+            <h1><span data-key="welcome">Welcome back,</span> <span class="personal-page-username"></span>.</h1>
+            <p data-key="manage">Manage your Bookme.com experience</p>
             <div class="personal-page-wrapper">
               <a href="#" class="personal-page-item">
                 <p><i class="far fa-user"></i></p>
                 <div>
-                  <h2>Personal details</h2>
-                  <p>Update your info and find out how it's used.</p>
-                  <p class="pseudolink">Manage personal details</p>
+                  <h2 data-key="personal">Personal details</h2>
+                  <p data-key="update">Update your info and find out how it's used.</p>
+                  <p data-key="managepd" class="pseudolink">Manage personal details</p>
                 </div>
               </a>
               <a href="#" class="personal-page-item">
                 <p><i class="far fa-list-alt"></i></p>
                 <div>
-                  <h2>Preferences</h2>
-                  <p>Change your language, currency, and accessibility requirements.</p>
-                  <p class="pseudolink">Manage preferences</p>
+                  <h2 data-key="preferences">Preferences</h2>
+                  <p data-key="change">Change your language, currency, and accessibility requirements.</p>
+                  <p data-key="managepr" class="pseudolink">Manage preferences</p>
                 </div>
               </a>
               <a href="#" class="personal-page-item">
                 <p><i class="fas fa-fingerprint"></i></p>
                 <div>
-                  <h2>Security</h2>
-                  <p>Adjust your security settings and set up two-factor authentication.</p>
-                  <p class="pseudolink">Manage account security</p>
+                  <h2 data-key="security">Security</h2>
+                  <p data-key="adjust">Adjust your security settings and set up two-factor authentication.</p>
+                  <p data-key="manageas" class="pseudolink">Manage account security</p>
                 </div>
               </a>
               <a href="#" class="personal-page-item">
                 <p><i class="far fa-credit-card"></i></p>
                 <div>
-                  <h2>Payment details</h2>
-                  <p>Securely add or remove payment methods to make it easier when you book.</p>
-                  <p class="pseudolink">Manage payment details</p>
+                  <h2 data-key="payment">Payment details</h2>
+                  <p data-key="securely">Securely add or remove payment methods to make it easier when you book.</p>
+                  <p data-key="managepay" class="pseudolink">Manage payment details</p>
                 </div>
               </a>
               <a href="#" class="personal-page-item">
                 <p><i class="far fa-bell"></i></p>
                 <div>
-                  <h2>Email notifications</h2>
-                  <p>Decide what you want to be notified about and unsubscribe from what you don't.</p>
-                  <p class="pseudolink">Manage notifications</p>
+                  <h2 data-key="notifications">Email notifications</h2>
+                  <p data-key="decide">Decide what you want to be notified about and unsubscribe from what you don't.</p>
+                  <p data-key="managen" class="pseudolink">Manage notifications</p>
                 </div>
               </a>
             </div>
             <div class="log-out">
-              <button class="log-out">Log Out</button>
+              <button data-key="logout" class="log-out">Log Out</button>
             </div>
           </div>
         </div>
 
         <div class="leave-your-feedback">
           <div class="container">
-            <h1>Share your experience with this website</h1>
-            <p>Your feedback is very important to us.</p>
+            <h1 data-key="share">Share your experience with this website</h1>
+            <p data-key="important">Your feedback is very important to us.</p>
             <form action="#" class="feedback-form">
               <input type="text" class="first-name feedback-field" placeholder="First name">
-              <p class="feedback-error-message">Please, fill in your name</p>
+              <p data-key="emname" class="feedback-error-message">Please, fill in your name</p>
               <input type="text" class="last-name feedback-field" placeholder="Last name">
-              <p class="feedback-error-message">Please, fill in your surname</p>
+              <p data-key="emsurname" class="feedback-error-message">Please, fill in your surname</p>
               <input type="email" class="email feedback-field" placeholder="Your e-mail">
-              <p class="feedback-error-message">Please, fill in your e-mail</p>
+              <p data-key="ememail" class="feedback-error-message">Please, fill in your e-mail</p>
               <textarea name="message" class="feedback-field" id="feedback-message" cols="30" rows="10"
               placeholder="Leave your message here..."></textarea>
-              <p class="feedback-error-message">Please, fill in your message</p>
-              <button name="submit">Send</button>
+              <p data-key="emmessage" class="feedback-error-message">Please, fill in your message</p>
+              <button data-key="send" name="submit">Send</button>
             </form>
             <div class="thank-message">
-              <p>Thank you for your feedback!</p>
+              <p data-key="thank">Thank you for your feedback!</p>
               <button>OK</button>
             </div>
           </div>
@@ -310,23 +315,22 @@
       </main>
     </div>
     <footer>
-      <h1>Save time, save money!</h1>
-      <p>Sign up and we'll send the best deals to you</p>
+      <h1 data-key="save">Save time, save money!</h1>
+      <p data-key="deals">Sign up and we'll send the best deals to you</p>
       <input type="email" placeholder="Your email">
-      <button>Subscribe</button>
+      <button data-key="subscribe">Subscribe</button>
     </footer>
   </div>
 
   <form action="#" class="sign-in-form">
-    <p class="close-form"></p>
-    <label for="username">Username</label>
+    <div class="close-form"></div>
+    <label data-key="username" for="username">Username</label>
     <input type="text" class="username">
-    <label for="password">Password</label>
+    <label data-key="password" for="password">Password</label>
     <input type="password" class="password">
-    <p class="sign-in-error">Incorrect username or password!</p>
-    <button type="submit">Continue</button>
+    <p data-key="incorrect" class="sign-in-error">Incorrect username or password!</p>
+    <button data-key="continue" type="submit">Continue</button>
   </form>
-
 
   <script type="module" async src="js/main.js"></script>
 </body>
