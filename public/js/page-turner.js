@@ -29,5 +29,5 @@ const onLinkClick = (evt) => {
 };
 
 pages.forEach(item => {
-    document.querySelector(`header .${item}`).addEventListener('click', onLinkClick);
+       document.querySelector(`header .${item}`).addEventListener('click', onLinkClick); 
 });

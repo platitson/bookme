@@ -68,28 +68,24 @@
               <h1 data-key="find">Find deals on hotels, homes and much more...</h1>
               <p data-key="cosy">From cosy country homes to funky city flats</p>
               <form action="#">
-                <input type="text" placeholder="Where are you going?">
-                <input type="date">
-                <input type="number" value="2">
-                <button data-key="search" type="submit">Search</button>
-=======
                 <div class="place-input">
                   <input type="text" placeholder="Where are you going?">
                 </div>
                 <div class="date-input">
-                  <label for="date-from">From</label>
+                  <label data-key="from" for="date-from">From</label>
                   <input id="date-from" type="date">
                 </div>
                 <div class="date-input">
-                  <label for="date-to">To</label>
+                  <label data-key="to" for="date-to">To</label>
                   <input id="date-to" type="date">
                 </div>
                 <div class="amount-input">
                   <input id="person-amount" type="number" value="2">
-                  <label for="person-amount">people</label>
+                  <label data-key="people" for="person-amount">people</label>
                 </div>
-                <button type="submit">Search</button>
+                <button class="search-results" data-key="search" type="submit">Search</button>
               </form>
+              <p class="search-box-error-message">Please enter a destination to start searching.</p>
               <input type="checkbox">
               <label data-key="work" for="checkbox">I'm travelling for work</label>
             </div>
@@ -316,9 +312,6 @@
               placeholder="Leave your message here..."></textarea>
               <p data-key="emmessage" class="feedback-error-message">Please, fill in your message</p>
               <button data-key="send" name="submit">Send</button>
-                placeholder="Leave your message here..."></textarea>
-              <p class="feedback-error-message">Please, fill in your message</p>
-              <button name="submit">Send</button>
             </form>
             <div class="thank-message">
               <p data-key="thank">Thank you for your feedback!</p>
@@ -329,6 +322,9 @@
 
         <div class="feedbacks">
           <div class="container feedbacks-wrapper"></div>
+        </div>
+
+        <div class="search-results container">
         </div>
       </main>
     </div>

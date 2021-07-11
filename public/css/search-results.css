@@ -1,0 +1,79 @@
+div.search-results {
+    padding-top: 30px;
+}
+
+.search-results > h1 {
+    margin-bottom: 25px;
+}
+
+.search-results > div {
+    margin-bottom: 20px;
+    border: 1px solid grey;
+    border-radius: 5px;
+    padding: 20px;
+    display: flex;
+}
+
+.search-results img {
+    height: 200px;
+    margin-right: 40px;
+}
+
+.search-results a {
+    font-size: 26px;
+    font-weight: bolder;
+    text-decoration: none;
+    color: #0071c2;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.search-results a:hover {
+    color: #315d9b;
+}
+
+.search-results a + p {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.search-results a + p::before {
+    content: "";
+    display: inline-block;
+    background-image: url(../images/location.png);
+    width: 18px;
+    height: 19px;
+    background-size: cover;
+    margin-right: 5px;
+    vertical-align: baseline;
+}
+
+.search-results button {
+    height: 50px;
+    width: 100px;
+    background-color: #0071c2;
+    border: none;
+    color: white;
+    font-size: 18px;
+    border-radius: 5px;
+    margin-top: 33px;
+}
+
+.search-results button:hover {
+    cursor: pointer;
+    background-color: #315d9b;
+}
+
+.search-results > div > div:last-child {
+    width: 30%;
+    text-align: right;
+}
+
+.search-results > div > div:last-child p:first-child {
+    color: grey;
+    margin-bottom: 5px;
+}
+
+.search-results > div > div:last-child p:last-child {
+    font-size: 32px;
+}
