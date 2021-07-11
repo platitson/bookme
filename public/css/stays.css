@@ -201,3 +201,77 @@
     width: 100%;
     border-radius: 3px;
 }
+
+@media (max-width: 950px) {
+    .search-box form {
+        flex-wrap: wrap;
+    }
+    .place-input {
+        width: 100%;
+    }
+    .date-input {
+        width: 33.5%;
+        margin-left: 0px;
+        margin-top: -5px;
+    }
+    .amount-input {
+        width: 33%;
+        margin-left: 0px;
+        margin-top: -5px;
+    }
+    .search-box form button {
+        width: 100%;
+        margin-left: 0px;
+        margin-top: -5px;
+    }
+}
+
+@media (max-width: 675px) {
+    .explore-wrapper {
+        flex-wrap: wrap;
+    }
+    .explore-items {
+        width: 32%;
+        margin-bottom: 20px;
+    }
+    .cesky-krumlov, .krkonose {
+        width: 49%;
+    }
+    .cesky-krumlov img, .krkonose img {
+        height: 210px;
+    }
+    .offers-vienna, .offers-budapest {
+        width: 49%;
+    }
+    .offers-berlin {
+        width: 100%;
+    }
+    .connect-wrapper {
+        flex-wrap: wrap;
+    }
+    .connect-items {
+        width: 49%;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .date-input {
+        width: 50%;
+    }
+    .amount-input {
+        width: 100%;
+    }
+    #person-amount {
+        width: 5%;
+    }
+}
+
+@media (max-width: 485px) {
+    .explore-items {
+        width: 49%;
+    }
+    .offers-items {
+        width: 100%;
+    }
+}

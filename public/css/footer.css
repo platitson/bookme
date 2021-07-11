@@ -30,3 +30,23 @@ footer button {
     color: white;
     border: none;
 }
+
+@media (max-width: 485px) {
+    footer {
+        margin-top: 50px;
+    }
+    footer input, footer button {
+        height: 30px;
+        font-size: 16px;
+    }
+    footer input {
+        width: 250px;
+    }
+    footer button {
+        width: 100px;
+    }
+    footer p {
+        margin-top: 10px;
+        margin-bottom: 15px;
+    }
+}

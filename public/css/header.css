@@ -176,3 +176,54 @@ header nav li:hover {
 .colored-clock {
     font-size: 20px;
 }
+
+@media (max-width: 800px) {
+    .header-wrapper {
+        display: block;
+    }
+    .colored-clock {
+        position: absolute;
+        right: 20px;
+        top: 28px;
+    }
+    .user-bar, header nav ul {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin-top: 10px;
+    }
+    header nav {
+        transform: none;
+    }
+    header nav li {
+        padding-right: 0;
+        margin-left: 20px;
+    }
+}
+
+@media (max-width: 530px) {
+    .logo {
+        font-size: 26px;
+    }
+    .colored-clock, .currency-button, header nav li {
+        font-size: 16px;
+    }
+    .register-button, .sign-in-button, button.personal-page, button.leave-your-feedback{
+        font-size: 14px;
+    }
+    .user-bar, header nav ul {
+        margin-top: 5px;
+    }
+    header nav li {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .user-bar {
+        flex-wrap: wrap;
+    }
+    .register-button, .sign-in-button, button.personal-page {
+    width: 40%;
+    }
+}

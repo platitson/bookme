@@ -77,3 +77,91 @@ div.search-results {
 .search-results > div > div:last-child p:last-child {
     font-size: 32px;
 }
+
+@media (max-width: 1120px) {
+    .search-results button {
+        margin-top: 15px;
+    }
+}
+
+@media (max-width: 940px) {
+    .search-results > div > div:last-child {
+        margin-left: 20px;
+    }
+}
+
+@media (max-width: 880px) {
+    .search-results img {
+        height: 220px;
+    }
+    .search-results a {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 790px) {
+    .search-results > div > div:last-child p:first-child {
+        font-size: 12px;
+    }
+    .search-results > div > div:last-child p:last-child {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 745px) {
+    .search-results > div {
+        flex-wrap: wrap;
+    }
+    .search-results img {
+        margin-right: 20px;
+    }
+    .search-results > div > div {
+        width: 60%;
+    }
+    .search-results > div > div:last-child {
+        text-align: left;
+        margin-left: 0;
+        margin-top: 15px;
+    }
+}
+
+@media (max-width: 675px) {
+    .search-results img {
+        height: 150px;
+    }
+    .search-results > div {
+        position: relative;
+    }
+    .search-results a {
+        font-size: 18px;
+        margin-bottom: 5px;
+    }
+    .search-results a + p {
+        font-size: 14px;
+    }
+    .search-results button {
+        height: 35px;
+        font-size: 16px;
+        position: absolute;
+        bottom: 20px;
+    }
+}
+
+@media (max-width: 492px) {
+    .search-results > div > div {
+        width: 100%;
+        margin-top: 20px;
+    }
+    .search-results > div > div:last-child {
+        position: absolute;
+        top: 0;
+        right: 20px;
+        text-align: right;
+    }
+    .search-results button {
+        position: static;
+    }
+    .search-results img {
+        height: 200px;
+    }
+}
