@@ -1,8 +1,10 @@
 const pages = ['stays', 'inspiration', 'personal-page', 'leave-your-feedback', 'feedbacks'];
+const searchResultPage = document.querySelectorAll('.search-results')[1];
 
 const hidePages = () => {
     pages.forEach(item => {
         document.querySelector(`main div.${item}`).style.display = 'none';
+        searchResultPage.style.display = 'none';
     });
 };
 

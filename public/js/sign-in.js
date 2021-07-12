@@ -59,7 +59,6 @@ const users = [
 ];
 
 window.addEventListener('load', () => {
-    personalAccountButton.style.display = 'none';
     nameDisplayCheckAfterReload();
     showFeedbacksPageButton();
 });

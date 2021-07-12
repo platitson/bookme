@@ -4,6 +4,8 @@ const thankMessage = document.querySelector('.thank-message');
 const thankMessageButton = document.querySelector('.thank-message button');
 const errorMessages = Array.from(document.querySelectorAll('.feedback-error-message'));
 
+console.log(errorMessages);
+
 function checkFieldsPresence() {
     for (let i = 0; i < feedbackFields.length; i++) {
         if (!feedbackFields[i].value) {
@@ -32,23 +34,18 @@ function clearField(el) {
     el.value = '';
 };
 
+function validateEmail(email) {
+    const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+};
+
 feedbackForm.addEventListener('submit', (evt) => {
     evt.preventDefault();
     removeErrorMessages();
-    if (feedbackFields.every(el => el.value)) {
-
-        // 18.1
-        // alert('Thank you for your feedback');
-
-        //18.2
-        // showThankMessage();
-        // thankMessageButton.addEventListener('click', hideThankMessage);
-
-        //18.3
-        // showThankMessage();
-        // setTimeout(hideThankMessage, 2000);
-
-        //20.5
+    if (document.querySelector('.feedback-form .email').value && !validateEmail(document.querySelector('.feedback-form .email').value)) {
+        errorMessages[2].style.display = 'block';
+    };
+    if (feedbackFields.every(el => el.value) && validateEmail(document.querySelector('.feedback-form .email').value)) {
         showThankMessage();
         thankMessage.addEventListener('click', (event) => {
             let target = event.target;

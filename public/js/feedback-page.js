@@ -7,6 +7,7 @@ const noFeedbacksMessage = () => {
     if (feedbacks.length === 0) {
         const message = document.createElement('h1');
         message.innerHTML = 'So far no one has written anything for you...';
+        message.setAttribute('data-key', 'nofeedbacks');
         feedbacksWrapper.appendChild(message);
         return message;
     }

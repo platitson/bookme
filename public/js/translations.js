@@ -83,7 +83,8 @@ const translations = {
         username: "Username",
         password: "Password",
         incorrect: "Incorrect username or password!",
-        continue: "Continue"
+        continue: "Continue",
+        nofeedbacks: "So far no one has written anything for you..."
     },
     cz: {
         leave: "Přidejte svůj názor",
@@ -169,7 +170,8 @@ const translations = {
         username: "Uživatelské jméno",
         password: "Heslo",
         incorrect: "Chybné uživatelské jméno nebo heslo!",
-        continue: "Pokračovat"
+        continue: "Pokračovat",
+        nofeedbacks: "Zatím pro vás nikdo nic nenapsal..."
     }
 };
 
