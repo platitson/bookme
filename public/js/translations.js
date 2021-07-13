@@ -1,5 +1,6 @@
 const translations = {
     en: {
+        select: "Select your language",
         leave: "Leave your feedback",
         register: "Register",
         sign: "Sign in",
@@ -87,6 +88,7 @@ const translations = {
         nofeedbacks: "So far no one has written anything for you..."
     },
     cz: {
+        select: "Vyberte svůj jazyk",
         leave: "Přidejte svůj názor",
         register: "Registrovat se",
         sign: "Přihlásit se",

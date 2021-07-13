@@ -7,6 +7,7 @@ import './destinations-builder.js';
 import './feedback-form.js';
 import './feedback-page.js';
 import './language-select.js';
+import './navbar.js';
 import './translations.js';
 import './hotel-search.js';
 import { Translation } from './translations.js';

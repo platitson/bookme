@@ -178,34 +178,74 @@ header nav li:hover {
     cursor: pointer;
 }
 
+.user-bar-icon {
+    color: white;
+    font-size: 26px;
+    vertical-align: baseline;
+    padding: 10px;
+    display: none;
+}
+
+.user-bar-icon:hover {
+    background-color: #315d9b;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
 .colored-clock {
     font-size: 20px;
 }
 
 @media (max-width: 800px) {
-    .header-wrapper {
-        display: block;
-    }
-    .colored-clock {
-        position: absolute;
-        right: 20px;
-        top: 28px;
-    }
-    .user-bar, header nav ul {
+    .user-bar {
+        background-color: white;
+        width: 102vw;
         display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        margin-top: 10px;
+        flex-direction: column-reverse;
+        position: absolute;
+        right: -20px;
+        top: 45px;
+        padding: 10px;
+        z-index: 2;
+        border: 1px solid rgb(230, 227, 227);
+        display: none;
     }
-    header nav {
-        transform: none;
+    .user-bar-icon {
+        display: inline-block;
     }
-    header nav li {
-        padding-right: 0;
-        margin-left: 20px;
+    .header-items button {
+        margin-right: 10px;
+        text-align: right;
+        background-color: white;
+        border: none;
+        border: bottom;
+        color: #0071c2;
+        font-size: 16px;
+        font-weight: bolder;
+    }
+    .header-items button:hover {
+        background-color: #dfeff8;
     }
     .select-language {
-        right: 280px;
+        position: absolute;
+        top: 123px;
+        right: 85px;
+        padding: 0 15px 0 0;
+        border: none;
+        border-right: 4px solid rgb(230, 227, 227);
+        border-radius: 0;
+    }
+    .select-language {
+        background-color: rgba(255, 255, 255, 0);
+    }
+    button.select-language-button {
+        background-color: rgba(255, 255, 255, 0);
+    }
+    .select-language h3 {
+        display: none;
+    }
+    .close-language-form {
+        display: none;
     }
 }
 
@@ -218,24 +258,5 @@ header nav li:hover {
     }
     .register-button, .sign-in-button, button.personal-page, button.leave-your-feedback{
         font-size: 14px;
-    }
-    .user-bar, header nav ul {
-        margin-top: 5px;
-    }
-    header nav li {
-        padding: 10px;
-    }
-}
-
-@media (max-width: 480px) {
-    .user-bar {
-        flex-wrap: wrap;
-    }
-    .register-button, .sign-in-button, button.personal-page {
-    width: 40%;
-    }
-    .select-language {
-        right: 80px;
-        top: 50px;
     }
 }

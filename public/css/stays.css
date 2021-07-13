@@ -208,15 +208,17 @@
     }
     .place-input {
         width: 100%;
+        z-index: 1;
     }
     .date-input {
         width: 33.5%;
-        margin-left: 0px;
         margin-top: -5px;
     }
-    .amount-input {
-        width: 33%;
+    .date-input-from {
         margin-left: 0px;
+    }
+    .amount-input {
+        width: 33.5%;
         margin-top: -5px;
     }
     .search-box form button {
@@ -257,10 +259,11 @@
 
 @media (max-width: 600px) {
     .date-input {
-        width: 50%;
+        width: 50.4%;
     }
     .amount-input {
         width: 100%;
+        margin-left: 0px;
     }
     #person-amount {
         width: 5%;
