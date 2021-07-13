@@ -134,17 +134,26 @@ div.regions a:hover, div.cities a:hover, div.places a:hover {
     }
 }
 
-@media (max-width: 715px) {
+@media (max-width: 850px) {
     div.regions a, div.cities a, div.places a {
         width: 30%;
     }
 }
 
-@media (max-width: 580px) {
+@media (max-width: 600px) {
     .pool, .berlin, .spa, .portugal {
         width: 100%;
     }
     .destinations {
         padding-top: 30px;
+    }
+    div.regions a, div.cities a, div.places a {
+        width: 47%;
+    }
+}
+
+@media (max-width: 415px) {
+    div.regions a, div.cities a, div.places a {
+        width: 100%;
     }
 }

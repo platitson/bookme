@@ -213,22 +213,22 @@ header nav li:hover {
     .user-bar-icon {
         display: inline-block;
     }
-    .header-items button {
+    button.register-button, button.sign-in-button, button.personal-page, button.leave-your-feedback, button.currency-button, .lang-button{
+        font-size: 16px;
+        font-weight: bolder;
         margin-right: 10px;
         text-align: right;
         background-color: white;
         border: none;
         border: bottom;
         color: #0071c2;
-        font-size: 16px;
-        font-weight: bolder;
     }
     .header-items button:hover {
         background-color: #dfeff8;
     }
     .select-language {
         position: absolute;
-        top: 123px;
+        top: 125px;
         right: 85px;
         padding: 0 15px 0 0;
         border: none;
@@ -249,14 +249,16 @@ header nav li:hover {
     }
 }
 
-@media (max-width: 530px) {
+@media (max-width: 550px) {
     .logo {
         font-size: 26px;
     }
-    .colored-clock, .currency-button, header nav li {
-        font-size: 16px;
-    }
-    .register-button, .sign-in-button, button.personal-page, button.leave-your-feedback{
+    .currency-button, header nav li {
         font-size: 14px;
+        padding: 5px;
+        transform: translateX(10px);
+    }
+    .colored-clock {
+        display: none;
     }
 }

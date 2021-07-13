@@ -2,12 +2,14 @@ const navIcon = document.querySelector('.user-bar-icon');
 const nav = document.querySelector('.user-bar');
 
 function showNav() {
-    if (nav.style.display === 'none'){
-        nav.style.display = 'flex';
-        navIcon.firstElementChild.className = 'fas fa-times';
-    } else {
-        nav.style.display = 'none';
-        navIcon.firstElementChild.className = 'fa fa-bars';
+    if (window.innerWidth <= 800) {
+        if (nav.style.display === 'none'){
+            nav.style.display = 'flex';
+            navIcon.firstElementChild.className = 'fas fa-times';
+        } else {
+            nav.style.display = 'none';
+            navIcon.firstElementChild.className = 'fa fa-bars';
+        }
     }
 }
 
