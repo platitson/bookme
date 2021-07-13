@@ -253,12 +253,13 @@ header nav li:hover {
     .logo {
         font-size: 26px;
     }
-    .currency-button, header nav li {
-        font-size: 14px;
-        padding: 5px;
-        transform: translateX(10px);
-    }
     .colored-clock {
         display: none;
+    }
+}
+
+@media (max-width: 420px) {
+    .user-bar {
+        width: 105vw;
     }
 }

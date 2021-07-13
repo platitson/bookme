@@ -17,8 +17,10 @@ navIcon.addEventListener('click', showNav);
 
 nav.addEventListener('click', (event) => {
     let target = event.target;
-    if (target.className === 'leave-your-feedback' || target.className === 'sign-in-button' || target.className === 'personal-page') {
+    if (window.innerWidth <= 800) {
+       if (target.className === 'leave-your-feedback' || target.className === 'sign-in-button' || target.className === 'personal-page') {
         nav.style.display = 'none';
         navIcon.firstElementChild.className = 'fa fa-bars';
+        } 
     }
 })
