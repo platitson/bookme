@@ -67,4 +67,13 @@ h3 {
     h1 {
         font-size: 24px;
     }
+    .main-content {
+        min-height: calc(100vh - 280px);
+    }
+}
+
+@media (max-width: 485px) {
+    .main-content {
+        min-height: calc(100vh - 230px);
+    }
 }

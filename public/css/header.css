@@ -258,6 +258,14 @@ header nav li:hover {
     }
 }
 
+@media (max-width: 470px) {
+    header nav li {
+        font-size: 16px;
+        padding: 8px;
+        transform: translateX(7px);
+    }
+}
+
 @media (max-width: 420px) {
     .user-bar {
         width: 105vw;

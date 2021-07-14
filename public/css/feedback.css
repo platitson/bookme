@@ -86,6 +86,9 @@
     .feedback-form {
         width: 95%;
     }
+    .thank-message {
+        left: 10vw;
+    }
 }
 
 @media (max-width: 390px) {
