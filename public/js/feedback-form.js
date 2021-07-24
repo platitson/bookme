@@ -4,8 +4,6 @@ const thankMessage = document.querySelector('.thank-message');
 const thankMessageButton = document.querySelector('.thank-message button');
 const errorMessages = Array.from(document.querySelectorAll('.feedback-error-message'));
 
-console.log(errorMessages);
-
 function checkFieldsPresence() {
     for (let i = 0; i < feedbackFields.length; i++) {
         if (!feedbackFields[i].value) {
