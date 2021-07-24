@@ -37,16 +37,19 @@
 .pool {
     background: linear-gradient(180deg, #ffffff00 50%, #242323 90%), url(../images/inspiration/pool.jpg);
     background-size: cover;
+    background-position: center;
 }
 
 .berlin {
     background: linear-gradient(180deg, #ffffff00 50%, #242323 90%), url(../images/inspiration/club.jpg);
     background-size: cover;
+    background-position: center;
 }
 
 .spa {
     background: linear-gradient(180deg, #ffffff00 50%, #242323 90%), url(../images/inspiration/mask.jpg);
     background-size: cover;
+    background-position: center;
 }
 
 .portugal, .ski {
@@ -57,11 +60,13 @@
 .portugal {
     background: linear-gradient(180deg, #ffffff00 50%, #242323 90%), url(../images/inspiration/house.jpg);
     background-size: cover;
+    background-position: center;
 }
 
 .ski {
     background: linear-gradient(180deg, #ffffff00 50%, #242323 90%), url(../images/inspiration/mountains.jpg);
     background-size: cover;
+    background-position: center;
 }
 
 .destinations {
@@ -84,13 +89,13 @@
 
 div.regions, div.cities, div.places {
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
-    
+    justify-content: flex-start;
 }
 
 div.regions a, div.cities a, div.places a {
     width: 19%;
+    margin-right: 10px;
     text-decoration: none;
     color: #0071c2;
     display: block;
@@ -109,4 +114,46 @@ div.regions a:hover, div.cities a:hover, div.places a:hover {
 .destinations-inactive {
     color: gray;
     background-color: white;
+}
+
+@media (max-width: 1055px) {
+    div.regions a, div.cities a, div.places a {
+        width: 23%;
+    }
+}
+
+@media (max-width: 950px) {
+    .pool, .berlin, .spa {
+        width: 49%;
+    }
+    .portugal, .ski {
+        height: 300px;
+    }
+    .ski {
+       width: 100%;
+    }
+}
+
+@media (max-width: 850px) {
+    div.regions a, div.cities a, div.places a {
+        width: 30%;
+    }
+}
+
+@media (max-width: 600px) {
+    .pool, .berlin, .spa, .portugal {
+        width: 100%;
+    }
+    .destinations {
+        padding-top: 30px;
+    }
+    div.regions a, div.cities a, div.places a {
+        width: 47%;
+    }
+}
+
+@media (max-width: 415px) {
+    div.regions a, div.cities a, div.places a {
+        width: 100%;
+    }
 }

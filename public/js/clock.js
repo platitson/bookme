@@ -18,6 +18,7 @@ const udpateTime = function () {
 };
 
 Clock.prototype.clockStart = function () {
+  udpateTime.call(this);
   setInterval(udpateTime.bind(this), 1000);
 };
 

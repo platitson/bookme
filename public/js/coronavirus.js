@@ -6,7 +6,7 @@ window.addEventListener('load', () => {
     contentCoronavirusHidden.style.display = 'none';
 });
 
-function popupWindow() {
+function showWindow() {
     if (contentCoronavirusHidden.style.display === 'none'){
         contentCoronavirusHidden.style.display = 'block';
         arrow.style.transform = "rotate(180deg)";
@@ -16,4 +16,4 @@ function popupWindow() {
     }
 }
 
-contentCoronavirusVisible.addEventListener('click', popupWindow);
+contentCoronavirusVisible.addEventListener('click', showWindow);

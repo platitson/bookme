@@ -18,7 +18,7 @@
     margin: 15px 0 5px;
     padding: 10px;
     font-family: 'Roboto', sans-serif;
-    font-size: 14px;
+    font-size: 16px;
     width: 100%;
 }
 
@@ -68,4 +68,31 @@
 .feedbacks-items {
     width: 25%;
     margin-bottom: 20px;
+}
+
+@media (max-width: 800px) {
+    .feedbacks-items {
+        width: 33%;
+    }
+}
+
+@media (max-width: 610px) {
+    .feedbacks-items {
+        width: 49%;
+    }
+}
+
+@media (max-width: 500px) {
+    .feedback-form {
+        width: 95%;
+    }
+    .thank-message {
+        left: 10vw;
+    }
+}
+
+@media (max-width: 390px) {
+    .feedbacks-items {
+        width: 100%;
+    }
 }

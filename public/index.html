@@ -22,18 +22,23 @@
               <a href="index.html" class="logo">Bookme<span>.com</span></a>
             </div>
             <div class="header-items">
-              <button class="currency-button">EUR</button>
-              <button class="lang-button"><img src="images/languages/english.png" alt=""></button>
-              <div class="select-language">
-                <div class="close-language-form"></div>
-                <h3>Select your language</h3>
-                <button data-language-key="EN" class="lang-button select-language-button"><img src="images/languages/english.png" alt=""></button>
-                <button data-language-key="CZ" class="lang-button select-language-button"><img src="images/languages/czech.png" alt=""></button>
+              <p class="user-bar-icon"><i class="fa fa-bars"></i></p>
+              <div class="user-bar">
+                <button class="currency-button">EUR</button>
+                <button class="lang-button"><img src="images/languages/english.png" alt=""></button>
+                <div class="select-language">
+                  <div class="close-language-form"></div>
+                  <h3 data-key="select">Select your language</h3>
+                  <button data-language-key="EN" class="lang-button select-language-button"><img
+                      src="images/languages/english.png" alt=""></button>
+                  <button data-language-key="CZ" class="lang-button select-language-button"><img
+                      src="images/languages/czech.png" alt=""></button>
+                </div>
+                <button data-key="leave" class="leave-your-feedback">Leave your feedback</button>
+                <button data-key="register" class="register-button">Register</button>
+                <button data-key="sign" class="sign-in-button">Sign in</button>
+                <button class="personal-page"></button>
               </div>
-              <button data-key="leave" class="leave-your-feedback">Leave your feedback</button>
-              <button data-key="register" class="register-button">Register</button>
-              <button data-key="sign" class="sign-in-button">Sign in</button>
-              <button class="personal-page"></button>
             </div>
           </div>
           <div class="header-wrapper">
@@ -57,7 +62,8 @@
                 <img src="images/arrow.png" alt="">
               </div>
               <div class="coronavirus-hidden">
-                <p data-key="restrictions">Please check for travel restrictions. Travel may be permitted only for certain purposes and in particular, touristic travel may not be allowed.</p>
+                <p data-key="restrictions">Please check for travel restrictions. Travel may be permitted only for
+                  certain purposes and in particular, touristic travel may not be allowed.</p>
                 <a data-key="more" href="https://www.google.com/search?q=coronavirus" target="_blank">Read more</a>
               </div>
             </div>
@@ -68,28 +74,24 @@
               <h1 data-key="find">Find deals on hotels, homes and much more...</h1>
               <p data-key="cosy">From cosy country homes to funky city flats</p>
               <form action="#">
-                <input type="text" placeholder="Where are you going?">
-                <input type="date">
-                <input type="number" value="2">
-                <button data-key="search" type="submit">Search</button>
-=======
                 <div class="place-input">
                   <input type="text" placeholder="Where are you going?">
                 </div>
-                <div class="date-input">
-                  <label for="date-from">From</label>
+                <div class="date-input date-input-from">
+                  <label data-key="from" for="date-from">From</label>
                   <input id="date-from" type="date">
                 </div>
                 <div class="date-input">
-                  <label for="date-to">To</label>
+                  <label data-key="to" for="date-to">To</label>
                   <input id="date-to" type="date">
                 </div>
                 <div class="amount-input">
                   <input id="person-amount" type="number" value="2">
-                  <label for="person-amount">people</label>
+                  <label data-key="people" for="person-amount">people</label>
                 </div>
-                <button type="submit">Search</button>
+                <button class="search-results" data-key="search" type="submit">Search</button>
               </form>
+              <p class="search-box-error-message">Please enter a destination to start searching.</p>
               <input type="checkbox">
               <label data-key="work" for="checkbox">I'm travelling for work</label>
             </div>
@@ -204,13 +206,15 @@
               <a href="#" class="inspiration-items pool">
                 <div>
                   <h2 data-key="pool">5 breathtaking stays with a private pool</h2>
-                  <p data-key="enjoy">Enjoy your holiday reclining by a private infinity pool or a panoramic plunge pool.</p>
+                  <p data-key="enjoy">Enjoy your holiday reclining by a private infinity pool or a panoramic plunge
+                    pool.</p>
                 </div>
               </a>
               <a href="#" class="inspiration-items berlin">
                 <div>
                   <h2 data-key="venues">Must-visit music venues in Berlin by ela.</h2>
-                  <p data-key="techno">Techno factories, beach bars and piano shrines – 6 favourites from a Eurovision Legend</p>
+                  <p data-key="techno">Techno factories, beach bars and piano shrines – 6 favourites from a Eurovision
+                    Legend</p>
                 </div>
               </a>
               <a href="#" class="inspiration-items spa">
@@ -222,13 +226,15 @@
               <a href="#" class="inspiration-items portugal">
                 <div>
                   <h2 data-key="portugal">A local guide to travelling in Portugal</h2>
-                  <p data-key="footsteps">Follow in the footsteps of local travellers and discover a new side to Portugal.</p>
+                  <p data-key="footsteps">Follow in the footsteps of local travellers and discover a new side to
+                    Portugal.</p>
                 </div>
               </a>
               <a href="#" class="inspiration-items ski">
                 <div>
                   <h2 data-key="ski">The best European ski resorts to visit this summer</h2>
-                  <p data-key="hiking">From hiking to white water rafting, summer brings out the best in these resorts.</p>
+                  <p data-key="hiking">From hiking to white water rafting, summer brings out the best in these resorts.
+                  </p>
                 </div>
               </a>
             </div>
@@ -290,7 +296,8 @@
                 <p><i class="far fa-bell"></i></p>
                 <div>
                   <h2 data-key="notifications">Email notifications</h2>
-                  <p data-key="decide">Decide what you want to be notified about and unsubscribe from what you don't.</p>
+                  <p data-key="decide">Decide what you want to be notified about and unsubscribe from what you don't.
+                  </p>
                   <p data-key="managen" class="pseudolink">Manage notifications</p>
                 </div>
               </a>
@@ -310,15 +317,12 @@
               <p data-key="emname" class="feedback-error-message">Please, fill in your name</p>
               <input type="text" class="last-name feedback-field" placeholder="Last name">
               <p data-key="emsurname" class="feedback-error-message">Please, fill in your surname</p>
-              <input type="email" class="email feedback-field" placeholder="Your e-mail">
+              <input type="text" class="email feedback-field" placeholder="Your e-mail">
               <p data-key="ememail" class="feedback-error-message">Please, fill in your e-mail</p>
               <textarea name="message" class="feedback-field" id="feedback-message" cols="30" rows="10"
-              placeholder="Leave your message here..."></textarea>
+                placeholder="Leave your message here..."></textarea>
               <p data-key="emmessage" class="feedback-error-message">Please, fill in your message</p>
               <button data-key="send" name="submit">Send</button>
-                placeholder="Leave your message here..."></textarea>
-              <p class="feedback-error-message">Please, fill in your message</p>
-              <button name="submit">Send</button>
             </form>
             <div class="thank-message">
               <p data-key="thank">Thank you for your feedback!</p>
@@ -329,6 +333,9 @@
 
         <div class="feedbacks">
           <div class="container feedbacks-wrapper"></div>
+        </div>
+
+        <div class="search-results container">
         </div>
       </main>
     </div>

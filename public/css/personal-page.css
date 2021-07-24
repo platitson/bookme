@@ -59,3 +59,9 @@
     cursor: pointer;
     background-color: #0071c2;
 }
+
+@media (max-width: 650px) {
+    .personal-page-item {
+        width: 100%;
+    }
+}

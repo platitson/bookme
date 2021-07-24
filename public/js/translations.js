@@ -1,5 +1,6 @@
 const translations = {
     en: {
+        select: "Select your language",
         leave: "Leave your feedback",
         register: "Register",
         sign: "Sign in",
@@ -11,6 +12,9 @@ const translations = {
         more: "Read more",
         find: "Find deals on hotels, homes and much more...",
         cosy: "From cosy country homes to funky city flats",
+        from: "From",
+        to: "To",
+        people: "people",
         search: "Search",
         work: "I'm travelling for work",
         explore: "Explore Czech Republic",
@@ -80,9 +84,11 @@ const translations = {
         username: "Username",
         password: "Password",
         incorrect: "Incorrect username or password!",
-        continue: "Continue"
+        continue: "Continue",
+        nofeedbacks: "So far no one has written anything for you..."
     },
     cz: {
+        select: "Vyberte svůj jazyk",
         leave: "Přidejte svůj názor",
         register: "Registrovat se",
         sign: "Přihlásit se",
@@ -94,6 +100,9 @@ const translations = {
         more: "Více informací",
         find: "Najděte si slevy na hotely, ubytování v soukromí a mnoho dalšího...",
         cosy: "Od útulných venkovských chalup až po stylové apartmány",
+        from: "Od",
+        to: "Do",
+        people: "lidé",
         search: "Hledat",
         work: "Cestuji pracovně",
         explore: "Poznejte destinaci České republiky",
@@ -163,7 +172,8 @@ const translations = {
         username: "Uživatelské jméno",
         password: "Heslo",
         incorrect: "Chybné uživatelské jméno nebo heslo!",
-        continue: "Pokračovat"
+        continue: "Pokračovat",
+        nofeedbacks: "Zatím pro vás nikdo nic nenapsal..."
     }
 };
 
